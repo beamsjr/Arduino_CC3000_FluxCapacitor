@@ -16,7 +16,7 @@ void api(Adafruit_CC3000_ClientRef client)
         
         // Check if we are receveing useful data and process it
         if ((c == '/' || c == '\r') && matched == false) {
-          if (answer.startsWith("PUT")){
+          if (answer.startsWith("GET")){
           splitString(answer, ' ', requestParts);
           splitString(requestParts[1], '/', urlParts);
           Serial.println("Request Type: " + requestParts[0]);
